@@ -1,15 +1,16 @@
 var personnes = ["yohan","lucas","sidney","maxime","marylise","tamara","alexandre","juan","valentin","raph","laurène","noureddine","vincent","maïalen","fanny"]
 var table1 = document.getElementById("table1")
 var table2 = document.getElementById("table2")
+var btn = document.getElementById("btn")
 
 //les deux tableaux ci dessous serviront à acceuillir les deux groupes
 
 var tab1 = []
 var tab2 = []
 
+btn.addEventListener("click",(e)=> {
 
-
-personnes.forEach(element => {
+    personnes.forEach(element => {
    
         //creation et insertion des tr contenant les noms des personnes
         var personne = element
@@ -34,6 +35,10 @@ personnes.forEach(element => {
             }
         }
      );
+
+
+})
+
 
 
 
