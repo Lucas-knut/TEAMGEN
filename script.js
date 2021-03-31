@@ -27,6 +27,17 @@ for (i = personnes.length -1 ; i >0 ; i--) {
 
 
 btn.addEventListener("click", () => {
+
+    //ici je vérifie si table1 a des enfants, si oui j'enclenche 2 boucles while afin de supprimer les enfants des 2 tableaux
+    if(table1.hasChildNodes){
+        while(table1.firstChild){
+            table1.removeChild(table1.lastChild)
+        }
+        while(table2.firstChild){
+            table2.removeChild(table2.lastChild)
+        }
+    }
+   
   
     //En ayant remarqué mes erreurs sur la v1, et après m'y être penché dessus,
     //je me suis dis qu'il était temps de repartir à zero.
@@ -51,7 +62,6 @@ btn.addEventListener("click", () => {
         var tr = document.createElement("tr")
         tr.append(element)
         table1.appendChild(tr)
-
     });
 
     gr2.forEach(element => {
@@ -60,7 +70,6 @@ btn.addEventListener("click", () => {
         table2.appendChild(tr)
 
     });
-
 })
 
-//quelques choses reste à bosser genre le fait de reset les tableaux à l'appel du btn 
+
