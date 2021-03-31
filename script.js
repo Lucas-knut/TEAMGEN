@@ -14,6 +14,18 @@ var table2 = document.getElementById("table2")
 
 var btn = document.getElementById("btn")
 
+//Ajout de la partie qui génére un tableau HTML avec tous les apprenants
+var tableBase = document.getElementById("basetab")
+
+personnes.forEach(element => {
+    var tbr = document.createElement("tr")
+    tbr.append(element)
+    tableBase.appendChild(tbr)
+    
+});
+
+
+
 
 //afin d'avoir plus de randomisation dans l'algo j'ai décider de faire un premmier tirage qui me permet de pas avoir le même tableau de départ pour tous les tirages
 for (i = personnes.length -1 ; i >0 ; i--) {
