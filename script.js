@@ -18,7 +18,6 @@ var perso = {
 var yohan = Object.assign({}, perso)
 yohan.id = 0
 yohan.nom = "yohan"
-yohan.dispo.lundi = false
 
 var lucas = Object.assign({}, perso)
 lucas.id = 1
