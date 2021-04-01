@@ -17,66 +17,66 @@ var perso = {
 }
 var yohan = Object.assign({}, perso)
 yohan.id = 0
-yohan.nom = "yohan"
+yohan.nom = "Yohan"
 
 var lucas = Object.assign({}, perso)
 lucas.id = 1
-lucas.nom = "lucas"
+lucas.nom = "Lucas"
 
 var sidney = Object.assign({}, perso)
 sidney.id = 2
-sidney.nom = "sidney"
+sidney.nom = "Sidney"
 
 var maxime = Object.assign({}, perso)
 maxime.id = 3
-maxime.nom = "maxime"
+maxime.nom = "Maxime"
 
 
 var marylise = Object.assign({}, perso)
 marylise.id = 4
-marylise.nom = "marylise"
+marylise.nom = "Marylise"
 
 var tamara = Object.assign({}, perso)
 tamara.id = 5
-tamara.nom = "tamara"
+tamara.nom = "Tamara"
 
 var alexandre = Object.assign({}, perso)
 alexandre.id = 6
-alexandre.nom = "alexandre"
+alexandre.nom = "Alexandre"
 
 
 var juan = Object.assign({}, perso)
 juan.id = 7
-juan.nom = "juan"
+juan.nom = "Juan"
 
 var valentin = Object.assign({}, perso)
 valentin.id = 8
-valentin.nom = "valentin"
+valentin.nom = "Valentin"
 
 var raph = Object.assign({}, perso)
 raph.id = 9
-raph.nom = "raph"
+raph.nom = "Raph"
 
 var laurène = Object.assign({}, perso)
 laurène.id = 10
-laurène.nom = "laurène"
+laurène.nom = "Laurène"
 
 
 var noureddine = Object.assign({}, perso)
 noureddine.id = 11
-noureddine.nom = "noureddine"
+noureddine.nom = "Noureddine"
 
 var vincent = Object.assign({}, perso)
 vincent.id = 12
-vincent.nom = "vincent"
+vincent.nom = "Vincent"
 
 var maïalen = Object.assign({}, perso)
 maïalen.id = 13
-maïalen.nom = "maïalen"
+maïalen.nom = "Maïalen"
 
 var fanny = Object.assign({}, perso)
 fanny.id = 14
-fanny.nom = "fanny"
+fanny.nom = "Fanny"
 
 var personnes = []
 personnes.push(yohan,lucas,sidney,maxime,marylise,tamara,alexandre,juan,valentin,raph,laurène,noureddine,vincent,maïalen,fanny)
