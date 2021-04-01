@@ -4,11 +4,87 @@
 //on tire un nombre aleatoire entre 0 et la taille de notre tableau et on permute les deux valeurs et on réhitère jusqu'à avoir fait ceci avec toutes les valeurs
 
 
-//récupération des éléments du dom
+var perso = {
+    id : null,
+    nom : "",
+    dispo : {
+        lundi : null,
+        mardi : null,
+        mercredi : null,
+        jeudi : null,
+        vendredi : null
+    }
+}
+var yohan = Object.assign({}, perso)
+yohan.id = 0
+yohan.nom = "yohan"
+yohan.dispo.lundi = false
 
-var personnes = ["yohan", "lucas", "sidney", "maxime", "marylise", "tamara", "alexandre", "juan", "valentin", "raph", "laurène", "noureddine", "vincent", "maïalen", "fanny"]
+var lucas = Object.assign({}, perso)
+lucas.id = 1
+lucas.nom = "lucas"
+
+var sidney = Object.assign({}, perso)
+sidney.id = 2
+sidney.nom = "sidney"
+
+var maxime = Object.assign({}, perso)
+maxime.id = 3
+maxime.nom = "maxime"
+
+
+var marylise = Object.assign({}, perso)
+marylise.id = 4
+marylise.nom = "marylise"
+
+var tamara = Object.assign({}, perso)
+tamara.id = 5
+tamara.nom = "tamara"
+
+var alexandre = Object.assign({}, perso)
+alexandre.id = 6
+alexandre.nom = "alexandre"
+
+
+var juan = Object.assign({}, perso)
+juan.id = 7
+juan.nom = "juan"
+
+var valentin = Object.assign({}, perso)
+valentin.id = 8
+valentin.nom = "valentin"
+
+var raph = Object.assign({}, perso)
+raph.id = 9
+raph.nom = "raph"
+
+var laurène = Object.assign({}, perso)
+laurène.id = 10
+laurène.nom = "laurène"
+
+
+var noureddine = Object.assign({}, perso)
+noureddine.id = 11
+noureddine.nom = "noureddine"
+
+var vincent = Object.assign({}, perso)
+vincent.id = 12
+vincent.nom = "vincent"
+
+var maïalen = Object.assign({}, perso)
+maïalen.id = 13
+maïalen.nom = "maïalen"
+
+var fanny = Object.assign({}, perso)
+fanny.id = 14
+fanny.nom = "fanny"
+
+var personnes = []
+personnes.push(yohan,lucas,sidney,maxime,marylise,tamara,alexandre,juan,valentin,raph,laurène,noureddine,vincent,maïalen,fanny)
+//var personnes = ["yohan", "lucas", "sidney", "maxime", "marylise", "tamara", "alexandre", "juan", "valentin", "raph", "laurène", "noureddine", "vincent", "maïalen", "fanny"]
 var table1 = document.getElementById("table1")
 var table2 = document.getElementById("table2")
+console.log(personnes);
 
 
 
@@ -19,7 +95,7 @@ var tableBase = document.getElementById("basetab")
 
 personnes.forEach(element => {
     var tbr = document.createElement("tr")
-    tbr.append(element)
+    tbr.append(element.nom)
     tableBase.appendChild(tbr)
     
 });
@@ -66,21 +142,29 @@ btn.addEventListener("click", () => {
     //ce qui simplifie pas mal pour la suite maintenant il suffit de couper notre tableau en 2 grâce à slice
     var gr1 = personnes.slice(0, 8)
     var gr2 = personnes.slice(8, 15)
+   
 
     //pour finir deux petites forEach pour chaques tableaux 
     //avec creation des tr et envois des personnes dedans et remplissage des 2 tables avec tout ceci
 
     gr1.forEach(element => {
         var tr = document.createElement("tr")
-        tr.append(element)
-        table1.appendChild(tr)
+        tr.append(element.nom)
+        if(element.dispo.lundi === false || element.dispo.mercredi === false || element.dispo.vendredi === false ){
+            table2.appendChild(tr)
+        }else {
+            table1.appendChild(tr)
+        }
     });
 
     gr2.forEach(element => {
         var tr = document.createElement("tr")
-        tr.append(element)
-        table2.appendChild(tr)
-
+        tr.append(element.nom)
+        if(element.dispo.mardi === false || element.dispo.jeudi === false){
+            table1.appendChild(tr)
+        }else {
+            table2.appendChild(tr)
+        }
     });
 })
 
