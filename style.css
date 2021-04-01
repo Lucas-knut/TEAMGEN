@@ -34,8 +34,25 @@ h1::before {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
+    height: 5px;
     width: 300px;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+p {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 78px;
     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
