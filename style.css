@@ -84,16 +84,6 @@ label::before {
     display: block;
 }
 
-p::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 78px;
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-}
-
 .btn {
     display: flex;
     justify-content: center;
@@ -116,6 +106,23 @@ input {
 input:hover {
     background-image: linear-gradient(0deg, #3abcf8 0%, #2b8eff 100%);
     color: #fff;
+}
+
+p {
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 300px;
+    background: #e7e7e7;
 }
 
 section {
