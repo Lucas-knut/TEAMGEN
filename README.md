@@ -1,9 +1,14 @@
-# TEAMGEN
+#CRITIQUES POST TEST "Retour utilisateur 10h30 02/04/2021"
 
-Lucas s'occupe du HTML/CSS et Yohan du JS.
+FRONTEND
+L'experience utilisateur est bonne avec un affichage soigné.
+La thématique est respectée tant sur le nombre de stagiaires affichés que du nombre de groupe.
+Le bouton Generate répond bien à son action de base.
+On notera qu'il manque cependant à ce stade, le calendrier/agenda afin de constituer les groupes via leurs absences ou obligations.
 
-On va partir sur une base qu'on a décidé, Lucas fait la struture en HTML puis à partir de ça on implante le JS et le CSS.
-Ensuite une fois le CSS terminé, on passe tous les deux sur le JS pour une explication de Yohan.
-
-Pour l'interface on va mettre un bouton et un tableau par équipe.
-Lorsque l'on clic sur le bouton, on affecte un nombre aleatoire entre 0 et 1 à chaques personnes et on pousse chaques personnes dans le tableau corespondant puis mise à jour du DOM avec affichage de nos 2 tableaux.
+BACKEND
+HTML > Le type de document est en anglais
+HTML > La arborésence de l'html est conforme et le placement du script en bas de page est parfait.
+CSS > L'utilisation du Poppins est apprécié mais le lien pourrait être raccourcis pour une meilleur visibilité
+SCRIPT > La variable "personnes" pourrait être plus visible pour la compréhension en tête de script
+SCRIPT > Dans l'attente du dévelloppement de la variable perso et de la mise en place du calendrier
