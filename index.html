@@ -11,8 +11,15 @@
     <main>
         <div class="container">
         <h1><img src="./image/logo_teamgen.svg" width="300px" alt=""></h1>
-        <p>Learners</p>
-        <table id="basetab"></table>
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="accordion" id="learners" class="accordion__input">
+                <label for="learners" class="accordion__label">Learners</label>
+                <div class="accordion__content">
+                    <table id="basetab"></table>
+                </div>
+            </div>
+        </div>
         <div class="btn">
         <input type="submit" value="GENERATE" id="btn">
         </div>

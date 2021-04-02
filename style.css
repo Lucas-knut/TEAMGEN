@@ -39,11 +39,49 @@ h1::before {
     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
-p {
+label {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 120px;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.accordion {
     position: relative;
-    font-size: 18px;
-    font-weight: 500;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion__label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.accordion__label:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion__content {
+    display: none;
+}
+
+.accordion__input {
+    display: none;
+}
+/*  */
+.accordion__input:checked ~ .accordion__content {
+    display: block;
 }
 
 p::before {
@@ -69,9 +107,10 @@ input {
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
-    border: 1px solid #e2e2e2;
-    color: #929292;
+    border: 1px solid #3abcf8;
+    color: #2b8eff;
     background-color: #fff;
+    cursor: pointer;
 }
 
 input:hover {
