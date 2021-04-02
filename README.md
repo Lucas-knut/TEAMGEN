@@ -1,9 +1,12 @@
-# TEAMGEN
+### RETOUR EXPERIENCE - MAIALEN
 
-Lucas s'occupe du HTML/CSS et Yohan du JS.
+Points positifs:
+- application fonctionnelle, génère bien deux groupes aléatoire de façon successive à l'appui du bouton
+- application agéable à utiliser
+- interface simple, lisible, facile de compréhension
+- couleurs douces
 
-On va partir sur une base qu'on a décidé, Lucas fait la struture en HTML puis à partir de ça on implante le JS et le CSS.
-Ensuite une fois le CSS terminé, on passe tous les deux sur le JS pour une explication de Yohan.
 
-Pour l'interface on va mettre un bouton et un tableau par équipe.
-Lorsque l'on clic sur le bouton, on affecte un nombre aleatoire entre 0 et 1 à chaques personnes et on pousse chaques personnes dans le tableau corespondant puis mise à jour du DOM avec affichage de nos 2 tableaux.
+Points à renforcer:
+- contenu très épuré, je suis d'avis d'ajouter des éléments accrocheurs, du dynamisme (ex: des animations)
+- le responsive fonctionne aisément puisque le contenu se trouve en colonne étroite, je suggèrerai peut être une version plus large
