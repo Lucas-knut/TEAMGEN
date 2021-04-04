@@ -78,6 +78,20 @@ var btn = document.getElementById("btn")
 
 //      Ajout de la partie qui génére et affiche un tableau HTML avec tous les apprenants
 var tableBase = document.getElementById("basetab")
+/*
+var th1 = document.createElement("th")
+th1.innerText = ""
+tableBase.append(th1)
+
+var th2 = document.createElement("th")
+th2.innerText = "groupe1"
+tableBase.append(th2)
+
+var th3 = document.createElement("th")
+th3.innerText = "groupe2"
+tableBase.append(th3)
+*/
+
 personnes.forEach(element => {
     var tbr = document.createElement("tr")
     var td1 = document.createElement("td")
@@ -126,9 +140,6 @@ function shuffleArr(personnes) {
     }
     return personnes
 }
-shuffleArr(personnes)
-
-
 
 
 //      Répartition des groupes
@@ -136,29 +147,60 @@ shuffleArr(personnes)
 var group1 = []
 var group2 = []
 
-btn.addEventListener("click", function dispoGrps() {
 
-    for (i = 0; i < personnes.length; i++) {
-        if (i % 2 == 0) {
-            if (personnes[i].g1 == false) {
-                group1.push(personnes[i])
-            } else if (personnes[i].g1 == true) {
-                group2.push(personnes[i])
-            }
+btn.addEventListener("click", function click() {
 
-        } else {
-            if (personnes[i].g2 == false) {
-                group2.push(personnes[i])
-            } else if (personnes[i].g2 == true) {
-                group1.push(personnes[i])
-            }
+    shuffleArr(personnes)
 
+    //      Reset des groups
 
-        }
+    while(group1[0] != undefined ){
+        group1.pop()
     }
-    //      Affichage des groupes 1 et 2
+    while(group2[0] != undefined ){
+        group2.pop()
+    }
+
+    //      Remplissage des groups
 
 
+        for (i = 0; i < personnes.length; i++) {
+            if (i % 2 == 0) {
+                if (personnes[i].g1 == true) {
+                    group1.push(personnes[i])
+                } else if (personnes[i].g2 == true) {
+                    group2.push(personnes[i])
+                } else {
+                    group1.push(personnes[i])
+                }
+            } else {
+                if (personnes[i].g2 == true) {
+                    group2.push(personnes[i])
+                } else if (personnes[i].g1== true) {
+                    group1.push(personnes[i])
+                } else {
+                    group2.push(personnes[i])
+                }
+            }
+        }
+
+//      Vérification des tailles des 2 groupe et rappel de function si besoin
+     
+    if(group1.length != group2.length +1){
+        click()
+    }
+
+    
+
+    //      Reset des tables
+    while(table1.firstChild){
+        table1.removeChild(table1.firstChild)
+    }
+    while(table2.firstChild){
+        table2.removeChild(table2.firstChild)
+    }
+
+    //      Remplissage des tables
     group1.forEach(element => {
         var tr = document.createElement("tr")
         tr.append(element.nom)
@@ -171,12 +213,6 @@ btn.addEventListener("click", function dispoGrps() {
         tr.append(element.nom)
         table2.appendChild(tr)
     });
-
 }
 )
-
-
-
-
-
 
