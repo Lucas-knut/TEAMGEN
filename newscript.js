@@ -1,15 +1,52 @@
-var students = ["Yohan","Lucas","Lorenzo","Marylise",'Nourredine']
+var btn = document.getElementById("btn")
+
 
 function getStudents(callback){
-//vu que c'est asynchrone on passe par un callback
-setTimeout(()=>{callback(students)},2000)
+    var personnes =  ["yohan","lucas","sidney","maxime","marylise","tamara","alexandre","juan","valentin","raph","laurène","noureddine","vincent","maïalen","fanny"]
+    setTimeout(()=> {
+        callback(personnes)
+    },5000)
+};
 
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    getStudents((studs=> {
+        var group1 = studs.slice(0)
+        aleat=[]
+
+        while(aleat.length <7) {
+            aleat.push(group1.splice(Math.floor(Math.random()*group1.length),1)[0])
+        }
+
+        group1.forEach(element => {
+            var tr = document.createElement("tr")
+            tr.append(element)
+            table1.appendChild(tr)
+        });
+        aleat.forEach(element => {
+            var tr = document.createElement("tr")
+            tr.append(element)
+            table2.appendChild(tr)
+        });
+    }))
+})
+
+
+
+
+/*
+function getStudents(callback){
+//vu que c'est asynchrone on passe par un callback
+setTimeout(()=>{callback(generate())},2000)
 }
 
 
-function generate(students){
+function generate(){
     //code de generation
-    return students
+    return ["yohan","lucas","sidney","maxime","marylise","tamara","alexandre","juan","valentin","raph","laurène","noureddine","vincent","maïalen","fanny"]
+
 }
 
 function uptdateView(gs){
@@ -23,8 +60,9 @@ getStudents(function(stu){
 })
 
 
-console.log("main");
+*/
 
+/*-----------------------------------------*/
 
 /*
 
