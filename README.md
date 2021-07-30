@@ -1,9 +1,6 @@
 # TEAMGEN
 
-Lucas s'occupe du HTML/CSS et Yohan du JS.
+## Projet de début de formation
 
-On va partir sur une base qu'on a décidé, Lucas fait la struture en HTML puis à partir de ça on implante le JS et le CSS.
-Ensuite une fois le CSS terminé, on passe tous les deux sur le JS pour une explication de Yohan.
-
-Pour l'interface on va mettre un bouton et un tableau par équipe.
-Lorsque l'on clic sur le bouton, on affecte un nombre aleatoire entre 0 et 1 à chaques personnes et on pousse chaques personnes dans le tableau corespondant puis mise à jour du DOM avec affichage de nos 2 tableaux.
+En raison des conditions sanitaires dû au COVID, nous avons été amené à séparer notre promo de 15 personnes en deux groupes afin de respecter les distanciations dans la classe. Un groupe donc en présentiel et l’autre en distanciel en parallèle. Nous avons dû face à cela concevoir un générateur de groupe aléatoire dans une page web que nous avons utilisé chaque semaine pour mélanger les groupes afin de collaborer avec le groupe entier.
+Le travail a été fait en binôme, un en présentiel, l’autre en distanciel afin de nous préparer à ces conditions de travail, pour l’organisation et pour nous familiariser avec l’outil Git.
